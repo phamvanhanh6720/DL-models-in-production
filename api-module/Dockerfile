@@ -1,7 +1,3 @@
-#===============================================
-#======  Using Python 3.9 build Imange =========
-#===============================================
-
 # pull official base image
 FROM python:3.9.5-slim-buster
 
