@@ -1,7 +1,7 @@
 import json
-from app.api.entities.model import DlResult
-from app.settings import config
-from app.mq_main import redis, celery_execute
+from api.entities.model import DlResult
+from settings import config
+from mq_main import redis, celery_execute
 
 
 def process_background(task_id: str,

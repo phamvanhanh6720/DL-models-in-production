@@ -4,11 +4,11 @@ from starlette.status import (
 )
 import uuid
 import json
-from app.mq_main import redis
-from app.helpers import time as time_helper
-from app.settings import config
-from app.api.entities.model import DLTimeHandle, DlResult, DlResponse
-from app.api.resources.v1.model.background import process_background
+from mq_main import redis
+from helpers import time as time_helper
+from settings import config
+from api.entities.model import DLTimeHandle, DlResult, DlResponse
+from api.resources.v1.model.background import process_background
 
 
 router = APIRouter()

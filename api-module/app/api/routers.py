@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from resources.v1 import show_image
-from resources.v1.model import dl_router
+from .resources.v1 import show_image
+from .resources.v1.model import dl_router
 
 
 router_v1 = APIRouter()

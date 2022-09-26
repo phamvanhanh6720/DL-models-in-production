@@ -3,7 +3,7 @@ from logging.handlers import TimedRotatingFileHandler
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.requests import Request
-
+import uvicorn
 
 from settings import config
 from databases.connect import Session
@@ -16,14 +16,14 @@ app = FastAPI(title=config.PROJECT_NAME, openapi_url="/api/openapi.json", docs_u
 
 
 # HANDLE LOG FILE
-formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+"""formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 handler = TimedRotatingFileHandler('/logs/{}-{}-{}_{}h-00p-00.log'.format(
     config.u.year, config.u.month, config.u.day , config.u.hour), when="midnight", interval=1, encoding='utf8')
 handler.suffix = "%Y-%m-%d"
 handler.setFormatter(formatter)
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-logger.addHandler(handler)
+logger.addHandler(handler)"""
 
 
 # ROUTER CONFIG
@@ -55,3 +55,7 @@ async def db_session_middleware(request: Request, call_next):
     request.state.db.close()
 
     return response
+
+
+if __name__ == '__main__':
+    uvicorn.run(app, host="0.0.0.0", port=8081)

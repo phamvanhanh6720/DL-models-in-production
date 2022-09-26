@@ -1,11 +1,15 @@
+from pathlib import Path
+import os
 import configparser
 import datetime
 import pytz 
 
 
 cfg = configparser.ConfigParser()
-cfg.read('./environment.ini')
 
+env_path = os.path.join(str(Path(__file__).parent.absolute()), 'environment.ini')
+print(env_path)
+cfg.read(env_path)
 
 #=========================================================================
 #                           TIMING CONFIG
