@@ -13,7 +13,7 @@ def process_background(task_id: str,
         redis.set(task_id, data_dump)
         # print(config.ML_QUERY_NAME, config.ML_OBJECT_DETECTION_TASK)
         celery_execute.send_task(
-            name="{}.{}".format(config.DL_QUERY_NAME, config.DL_OBJECT_DETECTION_TASK),
+            name="{}.{}".format(config.DL_QUERY_NAME, config.DL_TASK_NAME),
             kwargs={
                 'task_id': task_id,
                 'data': data_dump,

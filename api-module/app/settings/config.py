@@ -96,7 +96,7 @@ DL = cfg['dl']
 DL_IMAGE_TYPE = DL['image_type']
 DL_STORAGE_PATH = DL['storage_path']
 DL_STORAGE_UPLOAD_PATH = DL['storage_upload_path']
-DL_OBJECT_DETECTION_TASK = DL['object_detection_task']
+DL_TASK_NAME = DL['task_name']
 DL_QUERY_NAME = DL['query_name']
 
 

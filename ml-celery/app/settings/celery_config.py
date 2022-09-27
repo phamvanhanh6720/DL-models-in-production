@@ -1,10 +1,12 @@
-"""Module with Celery configurations to Audio Length worker."""
+import os
 from kombu import Queue
 import configparser
+from pathlib import Path
 
 
 cfg = configparser.ConfigParser()
-cfg.read('./environment.ini')
+env_path = os.path.join(str(Path(__file__).parent.absolute()), 'environment.ini')
+cfg.read(env_path)
 
 #=========================================================================
 #                          CELERY INFORMATION 
@@ -29,8 +31,6 @@ result_expires = 60 * 60 * 48  # 48 hours in seconds
 # #=========================================================================
 # #                          ML INFORMATION 
 # #=========================================================================
-ML_OBJECT_DETECTION_TASK_NAME = CELERY['object_detection_task']
-ML_STORAGE_PATH = CELERY['storage_path']
-ML_STORAGE_UPLOAD_PATH = CELERY['storage_upload_path']
-ML_STORAGE_OBJECT_DETECTION_PATH = CELERY['storage_object_detection_path']
-ML_IMAGE_TYPE = CELERY['image_type']
+DL_TASK_NAME = CELERY['task_name']
+DL_STORAGE_RESULT_PATH = CELERY['storage_result_path']
+DL_IMAGE_TYPE = CELERY['image_type']

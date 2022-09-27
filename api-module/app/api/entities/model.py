@@ -14,7 +14,7 @@ class DlResult(BaseModel):
     status: str = "PENDING"
     time: dict = None
     prompt_text: str
-    inference_result_url: str = None
+    inference_result_uri: str = None
     error: Optional[str] = None
     
     

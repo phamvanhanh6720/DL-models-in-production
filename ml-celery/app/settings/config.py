@@ -1,10 +1,12 @@
+import os
 import configparser
 import datetime
 import pytz 
-
+from pathlib import Path
 
 cfg = configparser.ConfigParser()
-cfg.read('./environment.ini')
+env_path = os.path.join(str(Path(__file__).parent.absolute()), 'environment.ini')
+cfg.read(env_path)
 
 
 #=========================================================================
@@ -12,13 +14,6 @@ cfg.read('./environment.ini')
 #=========================================================================
 u = datetime.datetime.utcnow()
 u = u.replace(tzinfo=pytz.timezone("Asia/Ho_Chi_Minh"))
-
-#=========================================================================
-#                          PROJECT INFORMATION 
-#=========================================================================
-PROJECT = cfg['project']
-BE_HOST = PROJECT['be_host']
-BE_PORT = PROJECT['be_port']
 
 #=========================================================================
 #                          REDIS INFORMATION 
