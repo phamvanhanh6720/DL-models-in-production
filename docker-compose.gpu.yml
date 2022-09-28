@@ -45,6 +45,11 @@ services:
     depends_on:
       - rabbitmq
       - redis
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
 
   ml-api:
     build:
