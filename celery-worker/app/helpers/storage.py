@@ -8,6 +8,7 @@ def create_path(path_dir):
     else:
         os.mkdir(path_dir)    
 
+
 def upload_file_bytes(file_bytes, path):
     f = open(path, "wb")
     f.write(file_bytes)

@@ -8,7 +8,6 @@ import pytz
 cfg = configparser.ConfigParser()
 
 env_path = os.path.join(str(Path(__file__).parent.absolute()), 'environment.ini')
-print(env_path)
 cfg.read(env_path)
 
 #=========================================================================

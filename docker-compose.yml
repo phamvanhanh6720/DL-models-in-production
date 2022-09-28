@@ -30,15 +30,15 @@ services:
     networks:
       - mlnet
 
-  ml-celery:
+  celery-worker:
     build:
-      context: ./ml-celery
+      context: celery-worker
       dockerfile: Dockerfile
-    container_name: ml-celery
+    container_name: celery-worker
     restart: unless-stopped
     command: sh -c "celery -A tasks worker --loglevel=info --concurrency=1 -E --logfile=/logs/celery.log"
     volumes:
-      - ./ml-storages:/storages/
+      - ./storages:/storages/
       - celery-logs:/logs/
     networks:
       - mlnet
@@ -54,7 +54,7 @@ services:
     restart: unless-stopped
     command: sh -c "uvicorn main:app --host 0.0.0.0 --port 8081 --reload"
     volumes:
-      - ./ml-storages:/storages/
+      - ./storages:/storages/
       - api-logs:/logs/
     ports:
      - 8081:8081
