@@ -94,7 +94,6 @@ BROKER = "amqp://{user}:{pw}@{hostname}:{port}/{vhost}".format(
 DL = cfg['dl']
 DL_IMAGE_TYPE = DL['image_type']
 DL_STORAGE_PATH = DL['storage_path']
-DL_STORAGE_UPLOAD_PATH = DL['storage_upload_path']
 DL_TASK_NAME = DL['task_name']
 DL_QUERY_NAME = DL['query_name']
 
