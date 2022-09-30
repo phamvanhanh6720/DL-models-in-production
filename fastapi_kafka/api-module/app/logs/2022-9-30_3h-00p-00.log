@@ -1,0 +1,21 @@
+2022-09-30 10:08:07,186 - INFO - Started server process [24682]
+2022-09-30 10:08:07,186 - INFO - Waiting for application startup.
+2022-09-30 10:08:07,186 - INFO - Starting up...
+2022-09-30 10:08:07,195 - INFO - Application startup complete.
+2022-09-30 10:08:07,195 - INFO - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2022-09-30 10:08:16,359 - WARNING - Topic requests is not available during auto-create initialization
+2022-09-30 10:10:44,741 - INFO - Shutting down
+2022-09-30 10:10:44,841 - INFO - Waiting for application shutdown.
+2022-09-30 10:10:44,842 - INFO - Shutting down...
+2022-09-30 10:10:44,843 - INFO - Application shutdown complete.
+2022-09-30 10:10:44,843 - INFO - Finished server process [24682]
+2022-09-30 10:11:15,219 - INFO - Started server process [24900]
+2022-09-30 10:11:15,219 - INFO - Waiting for application startup.
+2022-09-30 10:11:15,220 - INFO - Starting up...
+2022-09-30 10:11:15,226 - INFO - Application startup complete.
+2022-09-30 10:11:15,226 - INFO - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2022-09-30 10:18:27,577 - INFO - Shutting down
+2022-09-30 10:18:27,677 - INFO - Waiting for application shutdown.
+2022-09-30 10:18:27,678 - INFO - Shutting down...
+2022-09-30 10:18:27,679 - INFO - Application shutdown complete.
+2022-09-30 10:18:27,679 - INFO - Finished server process [24900]
