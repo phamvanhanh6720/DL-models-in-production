@@ -11,7 +11,6 @@ WORKDIR /app
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV CUDA_ID {$CUDA_ID}
 
 # install dependencies
 RUN pip install --upgrade pip

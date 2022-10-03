@@ -3,8 +3,8 @@
 #===============================================
 
 # pull official base image
-# FROM python:3.9.5-slim-buster
-FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
+# FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
+FROM nvcr.io/nvidia/pytorch:22.01-py3
 
 # set work directory
 WORKDIR /app

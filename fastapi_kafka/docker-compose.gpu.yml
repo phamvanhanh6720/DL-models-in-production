@@ -18,7 +18,7 @@ services:
   consumer1:
     build:
       context: ./kafka
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_gpu
     # image: kafka_consumer:latest
     environment:
       - CUDA_ID=0

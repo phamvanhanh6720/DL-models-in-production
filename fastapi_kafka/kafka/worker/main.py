@@ -6,7 +6,7 @@ from logging.handlers import TimedRotatingFileHandler
 
 
 import torch
-from torch import autocast
+# from torch import autocast
 from aiokafka import AIOKafkaConsumer
 from diffusers import StableDiffusionPipeline
 
@@ -36,8 +36,8 @@ model = StableDiffusionPipeline.from_pretrained(
                 "CompVis/stable-diffusion-v1-4",
                 use_auth_token=access_token)
 CUDA_ID = os.getenv('CUDA_ID')
-logger.info('CUDA_ID: {}'.format(CUDA_ID))
 device = 'cuda:{}'.format(CUDA_ID) if torch.cuda.is_available() else 'cpu'
+logger.info(device)
 if 'cuda' in device:
      model = model.to(device)
 
@@ -48,7 +48,8 @@ print('Model loaded')
 def infer(prompt_text):
 
     if 'cuda' in device:
-        with autocast(device):
+        # with autocast(device):
+        with torch.cuda.amp.autocast(True):
             image = model(prompt_text).images[0]
     else:
         image = model(prompt_text).images[0]
