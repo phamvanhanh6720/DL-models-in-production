@@ -16,10 +16,10 @@ services:
       - 8081:8081
 
   consumer1:
-    build:
-      context: ./kafka
-      dockerfile: Dockerfile_gpu
-    # image: kafka_consumer:latest
+    # build:
+    #   context: ./kafka
+    #   dockerfile: Dockerfile_gpu
+    image: phamvanhanh6720/dl_gpu_consumer:latest
     environment:
       - CUDA_ID=0
     container_name: consumer1
