@@ -5,6 +5,7 @@
 # pull official base image
 # FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
 FROM nvcr.io/nvidia/pytorch:22.01-py3
+ENV DEBIAN_FRONTEND=noninteractive
 
 # set work directory
 WORKDIR /app
