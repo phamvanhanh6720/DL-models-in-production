@@ -25,4 +25,4 @@ RUN pip install -r requirements_gpu.txt
 
 
 # copy project
-COPY ./app/ /app/
+COPY ./worker/ /app/
