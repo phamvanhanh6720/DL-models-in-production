@@ -30,6 +30,11 @@ services:
       -  consumer1-logs:/logs/
     depends_on:
       - api
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
 
 volumes:
   api-logs:
