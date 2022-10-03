@@ -20,6 +20,7 @@ docker compose -f docker-compose.kafka.yml up -d
 3. Build & run fastAPI app and consumers:
 ```
 cd ..
+
 docker compose -f docker-compose.gpu.yml up -d
 ```
 Run script above if GPUs are available, else:
