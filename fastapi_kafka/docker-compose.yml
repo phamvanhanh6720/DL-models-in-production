@@ -1,6 +1,17 @@
-version: '2.1'
+version: '3.8'
 
 services:
+  # Redis
+  redis:
+    image: redis
+    container_name: redis
+    restart: unless-stopped
+    command: redis-server --requirepass fsoft@123
+    volumes:
+      - redis-data:/data
+    ports:
+     - 6379:6379
+
   zoo1:
     image: confluentinc/cp-zookeeper:7.2.1
     hostname: zoo1
@@ -37,7 +48,48 @@ services:
     depends_on:
       - zoo1
 
-networks:
-  default:
-    external: true
-    name: dl_network
+  api:
+    build:
+      context: ./api-module
+      dockerfile: Dockerfile
+    # image: api:latest
+    container_name: api
+    restart: unless-stopped
+    environment:
+      - CUDA_ID=0
+    command: sh -c "uvicorn main:app --host 0.0.0.0 --port 8081 --reload"
+    volumes:
+      - ./storages:/storages/
+      - api-logs:/logs/
+    ports:
+      - 8081:8081
+    depends_on:
+      - kafka1
+      - redis
+
+  consumer1:
+    build:
+      context: ./kafka
+      dockerfile: Dockerfile
+    # image: kafka_consumer:latest
+    container_name: consumer1
+    restart: unless-stopped
+    command: sh -c "python main.py"
+    volumes:
+      - ./storages:/storages/
+      -  consumer1-logs:/logs/
+    depends_on:
+      - redis
+      - api
+      - kafka1
+
+volumes:
+  redis-data:
+  api-logs:
+  consumer1-logs:
+
+# networks:
+#   default:
+#     external: true
+#     name: dl_network
+

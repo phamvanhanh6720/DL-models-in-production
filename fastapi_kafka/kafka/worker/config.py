@@ -34,12 +34,12 @@ KAFKA_CONNECTION = '{}:{}'.format(
     KAFKA['host'],
     KAFKA['port']
 )
+KAFKA_GROUP_ID = KAFKA['group_id']
 
 
 # DL INFORMATION
 DL = cfg['dl']
 DL_IMAGE_TYPE = DL['image_type']
 DL_STORAGE_PATH = DL['storage_path']
-DL_QUERY_NAME = DL['query_name']
 DL_LOG = DL['logs']
 

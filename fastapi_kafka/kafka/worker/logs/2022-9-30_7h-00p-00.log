@@ -1,0 +1,33 @@
+2022-09-30 14:52:22,944 - INFO - Loading model ...
+2022-09-30 14:52:34,205 - INFO - Model loaded
+2022-09-30 14:52:34,206 - INFO - Updating subscribed topics to: frozenset({'requests'})
+2022-09-30 14:52:34,249 - INFO - Discovered coordinator 1 for group request_consumers
+2022-09-30 14:52:34,249 - INFO - Revoking previously assigned partitions set() for group request_consumers
+2022-09-30 14:52:34,250 - INFO - (Re-)joining group request_consumers
+2022-09-30 14:52:37,262 - INFO - Joined group 'request_consumers' (generation 15) with member_id aiokafka-0.7.2-3b64ec9d-25c0-49c5-a51b-ef3b6c55fd00
+2022-09-30 14:52:37,272 - INFO - Elected group leader -- performing partition assignments using roundrobin
+2022-09-30 14:52:37,288 - INFO - Successfully synced group request_consumers with generation 15
+2022-09-30 14:52:37,289 - INFO - Setting newly assigned partitions {TopicPartition(topic='requests', partition=0), TopicPartition(topic='requests', partition=1), TopicPartition(topic='requests', partition=2), TopicPartition(topic='requests', partition=3)} for group request_consumers
+2022-09-30 14:55:15,635 - INFO - Consumed: requests 0 11 a cat behind the house
+2022-09-30 15:01:09,383 - INFO - Task: 005aa411-a4c7-563e-a84c-09186109580a done
+2022-09-30 15:01:09,390 - WARNING - Heartbeat failed: local member_id was not recognized; resetting and re-joining group
+2022-09-30 15:01:09,390 - ERROR - Heartbeat session expired - marking coordinator dead
+2022-09-30 15:01:09,390 - WARNING - Marking the coordinator dead (node 1)for group request_consumers.
+2022-09-30 15:01:09,391 - ERROR - OffsetCommit failed for group request_consumers due to group error ([Error 25] UnknownMemberIdError: request_consumers), will rejoin
+2022-09-30 15:01:09,391 - ERROR - OffsetCommit failed for group request_consumers due to group error ([Error 25] UnknownMemberIdError: request_consumers), will rejoin
+2022-09-30 15:01:09,391 - ERROR - OffsetCommit failed for group request_consumers due to group error ([Error 25] UnknownMemberIdError: request_consumers), will rejoin
+2022-09-30 15:01:09,391 - ERROR - OffsetCommit failed for group request_consumers due to group error ([Error 25] UnknownMemberIdError: request_consumers), will rejoin
+2022-09-30 15:01:09,391 - ERROR - OffsetCommit failed for group request_consumers due to group error ([Error 25] UnknownMemberIdError: request_consumers), will rejoin
+2022-09-30 15:01:09,391 - ERROR - OffsetCommit failed for group request_consumers due to group error ([Error 25] UnknownMemberIdError: request_consumers), will rejoin
+2022-09-30 15:01:09,391 - ERROR - OffsetCommit failed for group request_consumers due to group error ([Error 25] UnknownMemberIdError: request_consumers), will rejoin
+2022-09-30 15:01:09,391 - ERROR - OffsetCommit failed for group request_consumers due to group error ([Error 25] UnknownMemberIdError: request_consumers), will rejoin
+2022-09-30 15:01:09,391 - WARNING - Auto offset commit failed: [Error 25] UnknownMemberIdError: request_consumers
+2022-09-30 15:01:09,393 - INFO - Consumed: requests 2 2 a cat behind a dog
+2022-09-30 15:06:46,710 - INFO - Task: 9acfcce9-bf71-557f-a285-d1be78ec4430 done
+2022-09-30 15:06:46,712 - INFO - Discovered coordinator 1 for group request_consumers
+2022-09-30 15:06:46,731 - INFO - Revoking previously assigned partitions frozenset({TopicPartition(topic='requests', partition=0), TopicPartition(topic='requests', partition=1), TopicPartition(topic='requests', partition=2), TopicPartition(topic='requests', partition=3)}) for group request_consumers
+2022-09-30 15:06:46,731 - INFO - (Re-)joining group request_consumers
+2022-09-30 15:06:49,748 - INFO - Joined group 'request_consumers' (generation 17) with member_id aiokafka-0.7.2-439dbd5a-237e-452c-bcb8-ae118d4b0928
+2022-09-30 15:06:49,748 - INFO - Elected group leader -- performing partition assignments using roundrobin
+2022-09-30 15:06:49,758 - INFO - Successfully synced group request_consumers with generation 17
+2022-09-30 15:06:49,759 - INFO - Setting newly assigned partitions {TopicPartition(topic='requests', partition=0), TopicPartition(topic='requests', partition=1), TopicPartition(topic='requests', partition=2), TopicPartition(topic='requests', partition=3)} for group request_consumers

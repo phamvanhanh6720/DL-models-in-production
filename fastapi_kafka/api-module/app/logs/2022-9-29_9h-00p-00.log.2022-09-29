@@ -1,7 +1,0 @@
-2022-09-29 16:35:55,630 - INFO - Started server process [92418]
-2022-09-29 16:35:55,630 - INFO - Waiting for application startup.
-2022-09-29 16:35:55,630 - INFO - Starting up...
-2022-09-29 16:35:55,655 - INFO - Application startup complete.
-2022-09-29 16:35:55,656 - INFO - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
-2022-09-29 16:35:59,977 - WARNING - Topic requests is not available during auto-create initialization
-2022-09-29 16:36:00,088 - WARNING - Topic requests is not available during auto-create initialization
